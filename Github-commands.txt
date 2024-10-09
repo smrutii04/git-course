@@ -369,9 +369,129 @@ Author: smrutii04 <smrutibhuyan911@gmail.com>
 Date:   Mon Oct 7 21:02:25 2024 +0530
 
     My First Commit-File1.txt
+Admin@smruti MINGW64 ~/git-course (main)
+$ ls -a
+./  ../  .git/  README.md
 
-Admin@smruti MINGW64 ~/Desktop/GitHub-Tutorial (main)
+Admin@smruti MINGW64 ~/git-course (main)
+$ cd ..
+
+Admin@smruti MINGW64 ~ (master)
+$ ls -a
+ ./              .viminfo             Documents/         NTUSER.DAT                                                                                     PrintHood@      Videos/
+ ../            '3D Objects'/         Downloads/         NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                        Recent@         git-course/
+ .bash_history   AppData/             Favorites/         NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms  'Saved Games'/   ntuser.dat.LOG1
+ .git/          'Application Data'@   Links/             NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms   Searches/       ntuser.dat.LOG2
+ .gitconfig      Contacts/           'Local Settings'@   NetHood@                                                                                       SendTo@         ntuser.ini
+ .lesshst        Cookies@             Music/             OneDrive/                                                                                     'Start Menu'@
+ .ssh/           Desktop/            'My Documents'@     Pictures/                                                                                      Templates@
+
+Admin@smruti MINGW64 ~ (master)
+$ cd .ssh
+
+Admin@smruti MINGW64 ~/.ssh (master)
+$ ls -a
+./  ../  id_ed25519  id_ed25519.pub
+
+Admin@smruti MINGW64 ~/.ssh (master)
+$ cat id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEt+NCU3aOpzOPmYOg2R7lJha9kF7CGMGgdoiK/HlSe Admin@smruti
+
+Admin@smruti MINGW64 ~/.ssh (master)
 $ ^C
 
-Admin@smruti MINGW64 ~/Desktop/GitHub-Tutorial (main)
-$
+Admin@smruti MINGW64 ~/.ssh (master)
+$ cd ..
+
+Admin@smruti MINGW64 ~ (master)
+$ cd git-course
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git remote add origin git@github.com:smrutii04/git-course.git
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git push -u origin main
+The authenticity of host 'github.com (64:ff9b::14cf:4952)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 231 bytes | 231.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:smrutii04/git-course.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ pwd
+/c/Users/Admin/git-course
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git remote -v
+origin  git@github.com:smrutii04/git-course.git (fetch)
+origin  git@github.com:smrutii04/git-course.git (push)
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git tag
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git tag -a v1.0 -m "1st release"
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git tag
+v1.0
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git show v1.0
+tag v1.0
+Tagger: smrutii04 <smrutibhuyan911@gmail.com>
+Date:   Tue Oct 8 09:21:10 2024 +0530
+
+1st release
+
+commit eb1bd266bea3dc494058a2e0a7f8fca496458ee9 (HEAD -> main, tag: v1.0, origin/main)
+Author: smrutii04 <smrutibhuyan911@gmail.com>
+Date:   Tue Oct 8 09:00:27 2024 +0530
+
+    1st commit
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..53614e8
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++# git-course demo
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git diff
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git commit -a -m "committed"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git push origin main
+Everything up-to-date
+
+Admin@smruti MINGW64 ~/git-course (main)
+$ git push origin v1.0
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 163 bytes | 163.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:smrutii04/git-course.git
+ * [new tag]         v1.0 -> v1.0
+
